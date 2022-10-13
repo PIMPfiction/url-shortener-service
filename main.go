@@ -32,7 +32,7 @@ func checkIfDatabaseExists() {
 
 }
 
-func printAllDatabse() {
+func printAllDatabase() {
 	query, err := DB.Query("SELECT * FROM url_table")
 	if err != nil {
 		fmt.Println(err)
@@ -91,6 +91,6 @@ func main() {
 		created_slug := createRedirection(redirect_uri, server_slug)
 		return c.String(200, domainName+created_slug)
 	})
-	printAllDatabse()
+	// printAllDatabase()
 	e.Logger.Fatal(e.Start(":1323"))
 }
